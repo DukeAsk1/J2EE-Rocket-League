@@ -1,0 +1,1 @@
+définir row et column pour chaque ligne et chaque images
