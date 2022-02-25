@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<html>
+    <head>
+        <link rel='stylesheet' href="custom.css">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    
+    <body>  
+        <div class="row" align="CENTER">
+            <div class='column_pay'>
+                <h2>List of your items: </h2>
+                <TABLE id='summary_cart' class='table'>
+                </TABLE>
+            </div>
+        </div>
+        <div class='row' align='CENTER'>
+            <span style="font-weight: bold;">Your total due :</span> 
+            <span id='total_cart' style="font-weight: bold;"></span>
+        <br>
+        <form action="confirm.jsp" method="POST">
+        <BR><INPUT TYPE="Submit" class='button_val' VALUE="Proceed to payment" align="RIGHT"><BR><BR>
+        </form>
+        <button onclick="history.back()" class="button_cart">Go Back</button>
+        </div>
+        
+        
+        <script>
+            var sum_cart = document.getElementById("summary_cart");
+            var tableHTML = window.localStorage["sharedTable"];
+            sum_cart.innerHTML = tableHTML;
+                //now table will be just like what you would get in test2 window if you did document.getElementById('yourTableId'); 
+            
+            var table = document.getElementById("myTable");
+            let subTotal = Array.from(sum_cart.rows).slice(1).reduce((total, row) => {
+              return total + parseFloat(row.cells[2].innerHTML);
+            }, 0);
+            document.getElementById("total_cart").innerHTML = subTotal.toFixed(2) + "€";
+
+            
+        </script>
+    </body>
+</html>
+

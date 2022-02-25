@@ -1,0 +1,506 @@
+<button class="tablinks" onclick="openItem(event, 'Rail')">Rail</button>
+            <button class="tablinks" onclick="openItem(event, 'Hat')">Hat</button>
+            <button class="tablinks" onclick="openItem(event, 'Antenna')">Antenna</button>
+            <button class="tablinks" onclick="openItem(event, 'Paint')">Paint</button>
+            <button class="tablinks" onclick="openItem(event, 'Banner')">Banner</button>
+            <button class="tablinks" onclick="openItem(event, 'Border')">Border</button>
+
+
+<div id='Hat' class='tabcontent' align='CENTER'>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <img src='Image/Hat/Accordeon.png' alt='Accordeon' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Hat/Beret.png' alt='Beret' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Hat/BoomBox.png' alt='BoomBox' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_3'>
+                    11.08 EUR
+                </div>
+                <div class='column_3'>
+                    11.08 EUR
+                </div>
+                <div class='column_3'>
+                    11.08 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    Limited Hat ACCORDION
+                </div>
+                <div class='column_3'>
+                    Uncommon Hat BERET
+                </div>
+                <div class='column_3'>
+                    Uncommon Hat BOOMBOX 
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'accordeon'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'beret'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'boombox'>Add to Cart</button>
+                </div>
+            </div>
+            <br>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <img src='Image/Hat/Catfish.png' alt='Catfish' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_2'>
+                    <img src='Image/Hat/GoldCap.png' alt='Gold Cap' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_2'>
+                    11.08 EUR
+                </div>
+                <div class='column_2'>
+                    986.27 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    Rare Hat CATFISH
+                </div>
+                <div class='column_2'>
+                    Limited Hat GOLD CAP  
+                </div>
+            </div>
+            
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'catfish'>Add to Cart</button> 
+                </div>
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'gold_cap'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+
+
+<div id='Paint' class='tabcontent' align='CENTER'>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <img src='Image/Paint/Anodized_Pearl.png' alt='Anodized Pearl' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Paint/Chipboard.png' alt='Chipboard' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Paint/Furry.png' alt='Furry' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_3'>
+                    10.81 EUR
+                </div>
+                <div class='column_3'>
+                    10.65 EUR
+                </div>
+                <div class='column_3'>
+                    10.65 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    Very Rare Paint ANODIZED PEARL
+                </div>
+                <div class='column_3'>
+                    Limited Paint CHIPBOARD
+                </div>
+                <div class='column_3'>
+                    Import Paint FURRY
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'anodized'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'chipboard'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'furry'>Add to Cart</button>
+                </div>
+            </div>
+            <br>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <img src='Image/Paint/Glossy_block.png' alt='Glossy Block' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_2'>
+                    <img src='Image/Paint/Toon_sketch.png' alt='Toon Sketch' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_2'>
+                    10.99 EUR
+                </div>
+                <div class='column_2'>
+                    10.81 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    Rare Paint GLOSSY BLOCK
+                </div>
+                <div class='column_2'>
+                    Rare Paint TOON SKETCH
+                </div>
+            </div>
+            
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'block'>Add to Cart</button> 
+                </div>
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'toon'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+
+<div id='Rail' class='tabcontent' align='CENTER'>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <img src='Image/Rail/Binary.png' alt='Binary' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Rail/Friction.png' alt='Friction' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Rail/LightSpeed.png' alt='Lightspeed' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_3'>
+                    11.01 EUR
+                </div>
+                <div class='column_3'>
+                    11.28 EUR
+                </div>
+                <div class='column_3'>
+                    11.28 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    Very Rare Rail BINARY
+                </div>
+                <div class='column_3'>
+                    Very Rare Rail FRICTION
+                </div>
+                <div class='column_3'>
+                    Very Rare Rail LIGHTSPEED
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'binary'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'friction'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'lightspeed'>Add to Cart</button>
+                </div>
+            </div>
+            <br>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <img src='Image/Rail/Strip.png' alt='Strip' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_2'>
+                    <img src='Image/Rail/ToonSketch.png' alt='Toon Sketch' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_2'>
+                    11.1 EUR
+                </div>
+                <div class='column_2'>
+                    10.67 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    Limited Rail RUMBLE STRIP
+                </div>
+                <div class='column_2'>
+                    Import Rail TOON SKETCH
+                </div>
+            </div>
+            
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'strip'>Add to Cart</button> 
+                </div>
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'toon_sketch'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id='Antenna' class='tabcontent' align='CENTER'>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <img src='Image/Antenna/Checker.png' alt='Checker' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Antenna/Doughnut.png' alt='Doughnut' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Antenna/Lightning.png' alt='Lightning' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_3'>
+                    11.1 EUR
+                </div>
+                <div class='column_3'>
+                    11.1 EUR
+                </div>
+                <div class='column_3'>
+                    11.1 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    Limited Antenna CHECKER
+                </div>
+                <div class='column_3'>
+                    Uncommon Antenna DOUGHNUT
+                </div>
+                <div class='column_3'>
+                    Uncommon Antenna LIGHTNING
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'checker'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'doughnut'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'lightning'>Add to Cart</button>
+                </div>
+            </div>
+            <br>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <img src='Image/Antenna/Macaron.png' alt='Macaron' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_2'>
+                    <img src='Image/Antenna/Nugget.png' alt='Gold Nugget' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_2'>
+                    11.1 EUR
+                </div>
+                <div class='column_2'>
+                    141.99 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    Uncommon Antenna MACARON
+                </div>
+                <div class='column_2'>
+                    Uncommon Antenna GOLD NUGGET
+                </div>
+            </div>
+            
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'macaron'>Add to Cart</button> 
+                </div>
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'gold_nugget'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id='Banner' class='tabcontent' align='CENTER'>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <img src='Image/Banner/Calculated.png' alt='Calculated' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Banner/Faboo.png' alt='Faboo' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Banner/Gamer_Pad.png' alt='Gamer Pad' style="width:250px;height:250px;">  
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_3'>
+                    11.01 EUR
+                </div>
+                <div class='column_3'>
+                    11.1 EUR
+                </div>
+                <div class='column_3'>
+                    11.28 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    Rare Banner CALCULATED
+                </div>
+                <div class='column_3'>
+                    Limited Banner FABOO
+                </div>
+                <div class='column_3'>
+                    Limited Banner GAMER PAD
+                </div>
+            </div>         
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'calculated'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'faboo'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'gamer_pad'>Add to Cart</button>
+                </div>
+            </div>
+            <br>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <img src='Image/Banner/Nian.png' alt='Nian' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_2'>
+                    <img src='Image/Banner/Starbase.png' alt='Starbase' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_2'>
+                    11.1 EUR
+                </div>
+                <div class='column_2'>
+                    11.1 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    Limited Banner GOODBYE NIAN
+                </div>
+                <div class='column_2'>
+                    Rare Banner STARBASE ARC
+                </div>
+            </div>
+            
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'nian'>Add to Cart</button> 
+                </div>
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'starbase'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id='Border' class='tabcontent' align='CENTER'>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <img src='Image/Border/Crown.png' alt='Crown' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Border/Damaged.png' alt='Damaged' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_3'>
+                    <img src='Image/Border/Joker.png' alt='Joker' style="width:250px;height:250px;">  
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_3'>
+                    11.01 EUR
+                </div>
+                <div class='column_3'>
+                    10.67 EUR
+                </div>
+                <div class='column_3'>
+                    11.01 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    Limited Border CROWN
+                </div>
+                <div class='column_3'>
+                    Limited Border DAMAGED
+                </div>
+                <div class='column_3'>
+                    Common Border JOKER
+                </div>
+            </div>         
+            <div class='row' align ="CENTER">
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'crown'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'damaged'>Add to Cart</button>
+                </div>
+                <div class='column_3'>
+                    <button type='button' class='button_cart' id = 'joker'>Add to Cart</button>
+                </div>
+            </div>
+            <br>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <img src='Image/Border/Pagoda.png' alt='Pagoda' style="width:250px;height:250px;"> 
+                </div>
+                <div class='column_2'>
+                    <img src='Image/Border/Xmas.png' alt='Xmas' style="width:250px;height:250px;"> 
+                </div>
+            </div>
+            <div class='row' align='CENTER'>
+                <div class='column_2'>
+                    11.38 EUR
+                </div>
+                <div class='column_2'>
+                    11.38 EUR
+                </div>
+            </div>
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    Limited Border SPRING PAGODA
+                </div>
+                <div class='column_2'>
+                    Limited Border HAPPY HOLIDAYS
+                </div>
+            </div>
+            
+            <div class='row' align ="CENTER">
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'pagoda'>Add to Cart</button> 
+                </div>
+                <div class='column_2'>
+                    <button type='button' class='button_cart' id = 'holidays'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<button onclick="history.back()" class="button_home">Go Back</button>
+
+minlength="16" maxlength="16" required
+
+
+ minlength="3" maxlength="3" required
