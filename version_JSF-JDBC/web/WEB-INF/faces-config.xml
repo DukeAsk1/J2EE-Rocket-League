@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+        <from-view-id>/register.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>ok</from-outcome>
+            <to-view-id>/main_page.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>err</from-outcome>
+            <to-view-id>/register.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/signin.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>connect</from-outcome>
+            <to-view-id>/main_page.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>err</from-outcome>
+            <to-view-id>/signin.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/cart.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registered</from-outcome>
+            <to-view-id>/registered.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>not registered</from-outcome>
+            <to-view-id>/payment.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

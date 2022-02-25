@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+<style>
+.button_val {
+background-color: #D00000; /* Red */
+border: none;
+border-radius: 6px;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+transition-duration: 0.4s;
+}
+
+.button_val:hover{
+background-color: white; /* Green */
+color: black;
+border: 1px solid black;
+}
+
+.button_back {
+background-color: #A776E7; /* Red */
+border: none;
+border-radius: 6px;
+color: white;
+padding: 3px 14px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+transition-duration: 0.4s;
+}
+
+.button_back:hover{
+background-color: white; /* Green */
+color: black;
+border: 1px solid black;
+}
+
+</style>
+ <h:body>
+    <h:form>
+        <h:commandButton class="button_back" value="Back" action="cart.xhtml"/>
+    </h:form>
+    <h:graphicImage url="/www/logo.jpg" alt="logo" style="width:400px;height:150px;"/>
+    <f:event type="preRenderComponent" listener="#{paymentBean.clear()}"/>
+    <h:form id="f" >
+        <h:panelGrid columns="2">
+           <h:outputText value="Gaming Username: " />
+           <h:inputText value="#{paymentBean.gameuser}" required="true" requiredMessage="Please enter your gaming username."/>
+           
+           <h:outputText value="Platform:  " />
+           <h:selectOneRadio value="#{paymentBean.platform}" required="true" requiredMessage="Please select your gaming platform.">
+               <f:selectItem itemValue="Epic Games" itemLabel="Epic Games" />
+               <f:selectItem itemValue="Steam" itemLabel="Steam" />
+               <f:selectItem itemValue="XBOX" itemLabel="XBOX" />
+               <f:selectItem itemValue="Playstation" itemLabel="Playstation" />
+               <f:selectItem itemValue="Nintendo Switch" itemLabel="Nintendo Switch"/>
+           </h:selectOneRadio>
+
+           <h:outputText value="Card ID: " />
+           <h:inputText value="#{paymentBean.id_card}" required="true" requiredMessage="Please enter your card ID."/>
+
+           <h:outputText value="Card Key: " />
+           <h:inputText value="#{paymentBean.id_key}" required="true" requiredMessage="Please enter your card key."/> 
+           
+           <h:outputText value="Remember Me: " />
+           <h:selectBooleanCheckbox value="#{paymentBean.rememberMe}"/>
+           <h:commandButton class="button_val" value="Validate" action="#{paymentBean.proceed(userbean.user)}" />
+        </h:panelGrid>
+
+    </h:form>
+ </h:body>
+</html>

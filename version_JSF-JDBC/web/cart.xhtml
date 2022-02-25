@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+ <style type="text/css" >
+    li.c1 { color: red }
+    span.c1 { color : red }
+    
+  .button_cancel {
+  background-color: #D8A90C; /* Yellow */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+.button_cancel:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 0.5px solid black;
+}
+
+.button_continue {
+  background-color: #D00000; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  transition-duration: 0.4s;
+}
+
+.button_continue:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+
+.button_back {
+background-color: #A776E7; /* Red */
+border: none;
+border-radius: 6px;
+color: white;
+padding: 3px 14px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+transition-duration: 0.4s;
+}
+
+.button_back:hover{
+background-color: white; /* Green */
+color: black;
+border: 1px solid black;
+}
+</style>
+ <h:head>
+    <title>Cart</title>
+ </h:head>
+    
+<h:form>
+    <h:commandButton class="button_back" value="Back" action="main_page.xhtml"/>
+</h:form>
+    
+<div align="center"> 
+    <h:body>
+
+
+         <h:dataTable value="#{cartBean.cart}" var="item">
+            <f:facet name="header">
+                <h:outputText value="Shopping cart"/>
+            </f:facet> 
+            <h:column>
+                <h:graphicImage value="#{item.url}" style="width:250px;height:250px;"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Name"/>
+                </f:facet> 
+                <h:outputText value="#{item.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Quantity"/>
+                </f:facet> 
+                <h:outputText value="#{cartBean.getQuantity(item)}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Price"/>
+                </f:facet> 
+                <h:outputText value="#{item.price}"/>€
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Description"/>
+                </f:facet> 
+                <h:outputText value="#{item.description}"/>
+            </h:column>
+            <h:column>
+               <h:form>
+                   <h:commandButton class="button_cancel" value="Remove from cart" action="#{cartBean.removeFromCart(item)}"/>
+               </h:form>
+            </h:column>
+            <f:facet name="footer" >
+                <div align="center">
+                    <br></br>
+                    <h:outputText value="Total : " style="font-weight:bold; font-size: 26px;"/>
+                    <h:outputText value="#{cartBean.total}" style="font-weight:bold; font-size: 26px;"/> 
+                    <h:outputText value=" € " style="font-weight:bold; font-size: 26px;"/>
+                    <br></br><br></br>
+                </div>
+            </f:facet> 
+
+            <f:facet name="footer">
+                <div align="center">
+                    <h:form>
+                        <h:commandButton class="button_continue" value="Proceed" action="#{paymentBean.isRegistered(userbean.user)}"/>
+                    </h:form>
+                </div>
+            </f:facet> 
+            
+        </h:dataTable>
+        
+
+     </h:body>
+</div>   
+</html>

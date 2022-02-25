@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+<style>
+.button_no {
+  background-color: #D00000; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_no:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+
+.button_yes {
+  background-color: #06800E; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_yes:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+
+.button_back {
+background-color: #A776E7; /* Red */
+border: none;
+border-radius: 6px;
+color: white;
+padding: 3px 14px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+transition-duration: 0.4s;
+}
+
+.button_back:hover{
+background-color: white; /* Green */
+color: black;
+border: 1px solid black;
+}
+
+</style>
+<h:form>
+    <h:commandButton class="button_back" value="Back" action="cart.xhtml"/>
+</h:form>
+ <br></br><br></br>
+<div align="center">
+    <h:body>
+       
+       <h:graphicImage url="/www/logo.jpg" alt="logo" style="width:400px;height:150px;"/>
+       <br></br><br></br>
+       <h:form id="f" >
+           <h:panelGrid columns="2">
+              <h:outputText value="Would you like to use these information ? " />
+              <br/>
+              <h:outputText value="Gaming Username: " />
+              <h:outputText value="#{paymentBean.gameuser}" style="font-weight:bold"/>
+
+              <h:outputText value="Platform:  " />
+              <h:outputText value="#{paymentBean.platform}" style="font-weight:bold"/>
+
+              <h:outputText value="Card ID: " />
+              <h:outputText value="#{paymentBean.id_card}" style="font-weight:bold"/>
+
+              <h:outputText value="Card Key: " />
+              <h:outputText value="#{paymentBean.id_key}" style="font-weight:bold"/>
+              <h:commandButton class="button_yes" value="Yes" action="thankyou.xhtml" />
+              <h:commandButton class="button_no"  value="No" action="payment.xhtml" />
+           </h:panelGrid>
+       </h:form>
+    </h:body>
+</div>
+</html>

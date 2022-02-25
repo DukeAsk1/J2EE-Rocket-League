@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+ <style>
+div.duc {
+    display:flex;
+    flex-direction: row
+    }
+div.left {
+    flex:1 1 auto
+    }
+div.right {
+    flex:0 1 auto
+    }   
+.button_tab {
+  background-color: #3733FF; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_tab:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+
+.button_cancel {
+  background-color: #D8A90C; /* Yellow */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  transition-duration: 0.4s;
+}
+
+.button_cancel:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 0.5px solid black;
+}
+
+.button_add {
+  background-color: #06800E; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_add:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+
+.button_continue {
+  background-color: #D00000; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+.button_continue:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+
+.button_log {
+  background-color: #F45A12; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_log:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+</style>
+</h:head>
+    <h:body>
+        
+        <div align="center" >
+            <h2>Choose your items</h2>
+            <h2>Search through the tabs to get what you want</h2>
+        </div>
+        
+        <div align="left">
+                <h:form>
+                    <h:commandButton class="button_log" value="Log out" action="signin.xhtml"/>
+                </h:form>                
+        </div>
+            
+        <h:form>    
+            <div align="center">
+                <h:commandButton class="button_tab" value="Body" action='#{productsBean.setType("Body")}' style="margin:5px;"/>
+                <h:commandButton class="button_tab" value="Boost" action='#{productsBean.setType("Boost")}' style="margin:5px;"/>
+                <h:commandButton class="button_tab" value="Decal" action='#{productsBean.setType("Decal")}' style="margin:5px;"/>
+                <h:commandButton class="button_tab" value="Goal Explosion" action='#{productsBean.setType("Goal Explosion")}' style="margin:5px;"/>
+                <h:commandButton class="button_tab" value="Wheel" action='#{productsBean.setType("Wheel")}' style="margin:5px;"/>
+                <h:commandButton class="button_tab" value="Credits" action='#{productsBean.setType("Credits")}' style="margin:5px;"/>
+            </div>
+            <br></br><br></br>
+        </h:form>
+        
+        <div class="duc">
+            <div class="left">
+                <h:dataTable value="#{productsBean.products}" var="item" bgcolor="#F1F1F1" border="10" cellpadding="5" cellspacing="3" width="50%" dir="LTR" frame="hsides" rules="all">
+                    <f:facet name="header">
+                        <h:outputText value="#{productsBean.type}" /> Products List
+                    </f:facet> 
+                    <h:column>
+                        <h:graphicImage value="#{item.url}" style="width:250px;height:250px;"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet> 
+                        <h:outputText value="#{item.name}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Price"/>
+                        </f:facet> 
+                        <h:outputText value="#{item.price}"/>€
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Description"/>
+                        </f:facet> 
+                        <h:outputText value="#{item.description}"/>
+                    </h:column>
+                    <h:column>
+                        <h:form>
+                            <h:commandButton class="button_add" value="Add to cart" action='#{cartBean.addToCart(item)}'/>
+                        </h:form>
+                    </h:column>
+                </h:dataTable>
+            </div>
+
+
+            <div class="right">
+                <h:form rendered="#{cartBean.notEmpty()}">
+                <h:dataTable value="#{cartBean.cart}" var="item" bgcolor="#F1F1F1" border="10" cellpadding="5" cellspacing="3" width="50%" dir="LTR" frame="hsides" rules="all">
+                    <f:facet name="header">
+                        Your cart
+                    </f:facet> 
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet> 
+                        <h:outputText value="#{item.name}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Quantity"/>
+                        </f:facet> 
+                        <h:outputText value="#{cartBean.getQuantity(item)}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Price"/>
+                        </f:facet> 
+                        <h:outputText value="#{item.price}"/>€
+                    </h:column>
+                    <h:column>
+                        <h:commandButton class="button_cancel" value="Remove from cart" action="#{cartBean.removeFromCart(item)}"/>
+                    </h:column>
+                    <br></br><br></br>
+                    <f:facet name="footer">
+                        <h:outputText value="Total : " style="font-weight:bold;"/> 
+                        <h:outputText value="#{cartBean.total}" style="font-weight:bold;"/> 
+                        <h:outputText value=" € " style="font-weight:bold;"/>
+                    </f:facet> 
+                    <f:facet name="footer">
+                        <h:commandButton class="button_continue" value="Continue" action="cart.xhtml"/>
+                    </f:facet> 
+                </h:dataTable>
+                </h:form>
+            </div>
+        </div>
+        
+        
+    </h:body>
+</html>

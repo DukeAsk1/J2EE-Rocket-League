@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+ <style type="text/css" >
+    li.c1 { color: red }
+    span.c1 { color : red }
+
+.button_signin {
+  background-color: #D00000; /* Yellow */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_signin:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 0.5px solid black;
+}
+
+.button_reg {
+  background-color: #3733FF; /* Blue */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button_reg:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+</style>
+ <h:head>
+    <h1>Welcome to the Rocket League Market Shop</h1>
+ </h:head>
+    <f:event type="preRenderComponent" listener="#{cartBean.clear()}"/>
+    <f:event type="preRenderComponent" listener="#{userbean.clear()}"/>
+ <h:body style="text-align: center">
+    <h:graphicImage url="/www/logo.jpg" alt="logo" style="width:400px;height:150px;" />
+    <br></br><br></br>
+    <h:form id="f" >
+        <h:panelGrid columns="2" style="margin: 0 auto;">
+                <h:outputText value="Username" />
+                <h:inputText label="Username" id="fuser" value="#{userbean.user}" required="true" requiredMessage="Please enter your username"> </h:inputText>
+
+                <h:outputText value="Password"/>
+                <h:inputSecret label="Password" id="fpassword" value="#{userbean.password}" required="true" requiredMessage="Please enter your password" ></h:inputSecret>
+                <br></br>
+        </h:panelGrid>
+        <h:commandButton class="button_signin" value="Sign in" action="#{userbean.validateUsernamePassword()}" />
+        
+    </h:form>
+    <h:form>
+        <p>New User to the Page ?</p>
+        <h:commandButton class="button_reg" value="Register" action="register.xhtml" />
+    </h:form>
+ </h:body>
+</html>

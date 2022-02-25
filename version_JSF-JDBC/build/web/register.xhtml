@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core">
+ <style type="text/css" >
+ li.c1 { color: red }
+ span.c1 { color : red }
+ .button_val {
+  background-color: #D00000; /* Red */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+.button_val:hover{
+  background-color: white; /* Green */
+  color: black;
+  border: 1px solid black;
+}
+</style>
+ <h:head>
+ <h1>Please register here</h1>
+ </h:head>
+ <h:body>
+ <p><h:messages /></p>
+ <h:form id="f" >
+ <h:panelGrid columns="2">
+ 
+ <h:outputText value="Username" />
+ <h:inputText label="Username" id="fuser" value="#{userbean.user}"
+ requiredMessage="Please enter your username" required="true" > </h:inputText>
+ 
+ <h:outputText value="First Name" />
+ <h:inputText label="First Name" id="fname" value="#{userbean.name}"
+ requiredMessage="Please enter your first name" required="true" />
+ 
+ <h:outputText value="Last Name" />
+ <h:inputText label="Last Name" id="flastName" value="#{userbean.lastName}"
+  requiredMessage="Please enter your last name" required="true" />
+ 
+ <h:outputText value="Email" />
+ <h:inputText label="Email" id="femail" value="#{userbean.email}"
+  requiredMessage="Please enter your email" required="true" />
+ 
+ <h:outputText value="Password" />
+ <h:inputSecret label="Password" id="fpassword" value="#{userbean.password}"
+  requiredMessage="Please enter your password" required="true" />
+ 
+ 
+ 
+ <h:commandButton class="button_val" value="Register" action="#{userbean.validationSystemeLogiciel()}"/>
+ </h:panelGrid>
+ </h:form>
+ </h:body>
+</html>
