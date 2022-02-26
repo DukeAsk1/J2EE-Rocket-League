@@ -26,37 +26,39 @@
 }
 </style>
  <h:head>
- <h1>Please register here</h1>
+     <title>Registration</title>
  </h:head>
  <h:body>
- <p><h:messages /></p>
- <h:form id="f" >
- <h:panelGrid columns="2">
- 
- <h:outputText value="Username" />
- <h:inputText label="Username" id="fuser" value="#{userbean.user}"
- requiredMessage="Please enter your username" required="true" > </h:inputText>
- 
- <h:outputText value="First Name" />
- <h:inputText label="First Name" id="fname" value="#{userbean.name}"
- requiredMessage="Please enter your first name" required="true" />
- 
- <h:outputText value="Last Name" />
- <h:inputText label="Last Name" id="flastName" value="#{userbean.lastName}"
-  requiredMessage="Please enter your last name" required="true" />
- 
- <h:outputText value="Email" />
- <h:inputText label="Email" id="femail" value="#{userbean.email}"
-  requiredMessage="Please enter your email" required="true" />
- 
- <h:outputText value="Password" />
- <h:inputSecret label="Password" id="fpassword" value="#{userbean.password}"
-  requiredMessage="Please enter your password" required="true" />
- 
- 
- 
- <h:commandButton class="button_val" value="Register" action="#{userbean.validationSystemeLogiciel()}"/>
- </h:panelGrid>
- </h:form>
+      <h1>Please register here</h1>
+    <p><h:messages /></p>
+    <h:form id="f" >
+    <h:panelGrid columns="2">
+
+    <h:outputText value="Username" />
+    <h:inputText label="Username" id="fuser" value="#{userbean.user}"
+    requiredMessage="Please enter your username." required="true" > </h:inputText>
+
+    <h:outputText value="First Name" />
+    <h:inputText label="First Name" id="fname" value="#{userbean.name}"
+    requiredMessage="Please enter your first name." required="true" />
+
+    <h:outputText value="Last Name" />
+    <h:inputText label="Last Name" id="flastName" value="#{userbean.lastName}"
+     requiredMessage="Please enter your last name." required="true" />
+
+    <h:outputText value="Email" />
+    <h:inputText label="Email" id="femail" value="#{userbean.email}" requiredMessage="Please enter your email." required="true" validatorMessage="Please enter a valid email." >
+       <f:validateRegex pattern="([^.@]+)(\.[^.@]+)*@([^.@]+\.)+([^.@]+)" />
+    </h:inputText>
+
+    <h:outputText value="Password" />
+    <h:inputSecret label="Password" id="fpassword" value="#{userbean.password}"
+     requiredMessage="Please enter your password." required="true" />
+
+
+
+    <h:commandButton class="button_val" value="Register" action="#{userbean.validationSystemeLogiciel()}"/>
+    </h:panelGrid>
+    </h:form>
  </h:body>
 </html>

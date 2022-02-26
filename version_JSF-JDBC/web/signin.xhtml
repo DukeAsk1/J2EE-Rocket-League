@@ -44,12 +44,14 @@
   border: 1px solid black;
 }
 </style>
- <h:head>
-    <h1>Welcome to the Rocket League Market Shop</h1>
- </h:head>
+<h:head>
+    <title>Login Page</title>
+</h:head>
+    
     <f:event type="preRenderComponent" listener="#{cartBean.clear()}"/>
     <f:event type="preRenderComponent" listener="#{userbean.clear()}"/>
  <h:body style="text-align: center">
+     <h1>Welcome to the Rocket League Market Shop</h1>
     <h:graphicImage url="/www/logo.jpg" alt="logo" style="width:400px;height:150px;" />
     <br></br><br></br>
     <h:form id="f" >

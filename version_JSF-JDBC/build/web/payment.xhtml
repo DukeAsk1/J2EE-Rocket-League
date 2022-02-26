@@ -4,10 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
  xmlns:h="http://xmlns.jcp.org/jsf/html"
  xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
 <style>
 .button_val {
 background-color: #D00000; /* Red */
@@ -47,6 +43,9 @@ border: 1px solid black;
 }
 
 </style>
+<h:head>
+        <title>Payment Information</title>
+</h:head>
  <h:body>
     <h:form>
         <h:commandButton class="button_back" value="Back" action="cart.xhtml"/>
@@ -67,14 +66,18 @@ border: 1px solid black;
                <f:selectItem itemValue="Nintendo Switch" itemLabel="Nintendo Switch"/>
            </h:selectOneRadio>
 
-           <h:outputText value="Card ID: " />
-           <h:inputText value="#{paymentBean.id_card}" required="true" requiredMessage="Please enter your card ID."/>
+           <h:outputText value="Credit Card ID (16-digit code): " />
+           <h:inputText value="#{paymentBean.id_card}" required="true" requiredMessage="Please enter your card ID." validatorMessage="Please enter a valid card ID.">
+               <f:validateRegex pattern="((?=.*[0-9]).{16})" />
+           </h:inputText>
 
-           <h:outputText value="Card Key: " />
-           <h:inputText value="#{paymentBean.id_key}" required="true" requiredMessage="Please enter your card key."/> 
-           
-           <h:outputText value="Remember Me: " />
+           <h:outputText value="Credit Card Key (3-digit code): " />
+           <h:inputText value="#{paymentBean.id_key}" required="true" requiredMessage="Please enter your card key." validatorMessage="Please enter a valid card key."> 
+               <f:validateRegex pattern="((?=.*[0-9]).{3})" />
+           </h:inputText>
+           <h:outputText value="Remember my IDs" />
            <h:selectBooleanCheckbox value="#{paymentBean.rememberMe}"/>
+            
            <h:commandButton class="button_val" value="Validate" action="#{paymentBean.proceed(userbean.user)}" />
         </h:panelGrid>
 
