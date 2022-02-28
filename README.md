@@ -7,14 +7,15 @@ Chacun de ces dossiers contient toutes les pages et fonctions nécessaires à le
 Première version: [`méthode Servlet/JSP sans modèle MVC`](https://git.esiee.fr/duongh/technologies-web-avec-jee-rocket-league/-/tree/master/version_Servlet_JSP_non_MVC)
 
 
-Deuxième version: méthode JSP MVC 1 :
+Deuxième version: [`méthode JSP MVC 1`](https://git.esiee.fr/duongh/technologies-web-avec-jee-rocket-league/-/tree/master/version_JSP_MVC1)
 
 
 Troisième version: [`méthode JSF/JDBC`](https://git.esiee.fr/duongh/technologies-web-avec-jee-rocket-league/-/tree/master/version_JSF-JDBC)
 
 
-
-
 La seule manipulation que vous aurez à faire en dehors de l’initialisation du projet est de créer la database `Projet` avec comme identifiant `duongh` et comme mot de passe `projet` 
 
 Vous retrouverez également en dehors des dossiers un fichier `sql.txt` qui contient les requêtes SQL pour la création de nos tables qui sera à insérer dans l’onglet table de la database `Projet` en faisant un clique droit “add command” et y insérer les commandes sql.
+
+
+Vous y retrouverez également une vidéo de démonstration de notre site d’e-commerce.
