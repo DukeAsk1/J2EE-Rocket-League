@@ -18,4 +18,4 @@ La seule manipulation que vous aurez à faire en dehors de l’initialisation du
 Vous retrouverez également en dehors des dossiers un fichier `sql.txt` qui contient les requêtes SQL pour la création de nos tables qui sera à insérer dans l’onglet table de la database `Projet` en faisant un clique droit “add command” et y insérer les commandes sql.
 
 
-Vous y retrouverez également une vidéo de démonstration de notre site d’e-commerce.
+Vous y retrouverez également une vidéo de démonstration de notre site d’e-commerce [`demo_servlet_jsp.mkv`](https://git.esiee.fr/duongh/technologies-web-avec-jee-rocket-league/-/blob/master/demo_servlet_jsp.mkv)
