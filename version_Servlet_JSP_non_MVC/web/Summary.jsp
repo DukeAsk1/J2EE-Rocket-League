@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Summary
+    Document   : Summary.jsp
     Created on : 10 févr. 2022, 14:36:48
-    Author     : dduon
+    Author     : Hoang-Duc DUONG
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

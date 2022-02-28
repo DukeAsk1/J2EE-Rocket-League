@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Register
+    Document   : Register.jsp
     Created on : 22 janv. 2022, 23:07:11
-    Author     : dduon
+    Author     : Hoang-Duc DUONG
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
