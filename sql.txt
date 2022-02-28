@@ -1,0 +1,57 @@
+drop table products;
+drop table users;
+
+create table users(
+	username varchar(50),
+	password varchar(50),
+	email varchar(100),
+	firstname varchar(50),
+	lastname varchar(50)
+);
+
+insert into users (username,password,email,firstname,lastname) values ('DukeAsk1','jadoreJEE','hoang-duc.duong@edu.esiee.fr','Hoang-Duc','Duong');
+insert into users (username,password,email,firstname,lastname) values ('tralo','tralo','loc.tran@esiee.fr','Loc','Tran');
+
+create table products(
+	name varchar(50),
+	price float,
+	type varchar(20),
+	description varchar(100)
+);
+
+
+insert into products (name,price,type,description) values ('Takumi',11.26,'Body','Very Rare Body TAKUMI');
+insert into products (name,price,type,description) values ('Dominus',3.14,'Body','Import Body DOMINUS');
+insert into products (name,price,type,description) values ('Octane',11.26,'Body','Import Body OCTANE');
+insert into products (name,price,type,description) values ('Scarab',4.73,'Body','Very Rare Body SCARAB');
+insert into products (name,price,type,description) values ('Fennec',4.73,'Body','Import Body FENNEC');
+
+insert into products (name,price,type,description) values ('Flamerate',10.65,'Boost','Import Boost FLAMERATE');
+insert into products (name,price,type,description) values ('Heart',11.26,'Boost','Very Rare Boost HEART');
+insert into products (name,price,type,description) values ('Ink',11.26,'Boost','Very Rare Boost INK');
+insert into products (name,price,type,description) values ('Lantern Lift',11.08,'Boost','Limited Boost LANTERN LIFT');
+insert into products (name,price,type,description) values ('Dark Matter',10.65,'Boost','Import Boost DARK MATTER');
+
+insert into products (name,price,type,description) values ('20XX',3.17,'Decal','Black Market Decal 20XX');
+insert into products (name,price,type,description) values ('Dragon',11.12,'Decal','Limited Decal DRAGON');
+insert into products (name,price,type,description) values ('Mainframe',5.85,'Decal','Black Market Decal MAINFRAME');
+insert into products (name,price,type,description) values ('RLCS X',10.65,'Decal','Limited Decal RLCS X');
+insert into products (name,price,type,description) values ('Storm',3.99,'Decal','Black Market Decal STORM');
+
+insert into products (name,price,type,description) values ('Air Strike',8.65,'Goal Explosion','Black Market Goal Explosion AIR STRIKE');
+insert into products (name,price,type,description) values ('Dueling Dragon',7.65,'Goal Explosion','Black Market Goal Explosion DUELING DRAGON');
+insert into products (name,price,type,description) values ('Splash',11.35,'Goal Explosion','Limited Goal Explosion SPLASH');
+insert into products (name,price,type,description) values ('Supernova',10.81,'Goal Explosion','Black Market Goal Explosion SUPERNOVA');
+insert into products (name,price,type,description) values ('Yee Haw',8.65,'Goal Explosion','Limited Goal Explosion YEE HAW');
+
+insert into products (name,price,type,description) values ('Christiano',10.83,'Wheel','Very Rare Wheel CHRISTIANO');
+insert into products (name,price,type,description) values ('Dieci',193.93,'Wheel','Exotic Wheel DIECI');
+insert into products (name,price,type,description) values ('Glonex',11.96,'Wheel','Limited Wheel GLONEX');
+insert into products (name,price,type,description) values ('Hypnotik',11.38,'Wheel','Exotic Wheel HYPNOTIK');
+insert into products (name,price,type,description) values ('Reaper',50.51,'Wheel','Very Rare Wheel REAPER');
+
+insert into products (name,price,type,description) values ('100',0.65,'Credits','100 Credits');
+insert into products (name,price,type,description) values ('500',3.14,'Credits','500 Credits');
+insert into products (name,price,type,description) values ('2000',12.33,'Credits','2000 Credits');
+insert into products (name,price,type,description) values ('10000',61,'Credits','10000 Credits');
+insert into products (name,price,type,description) values ('30000',181.15,'Credits','30000 Credits');
