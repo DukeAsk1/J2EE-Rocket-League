@@ -1,5 +1,6 @@
 drop table products;
 drop table users;
+drop table user_id;
 
 create table users(
 	username varchar(50),
@@ -11,6 +12,16 @@ create table users(
 
 insert into users (username,password,email,firstname,lastname) values ('DukeAsk1','jadoreJEE','hoang-duc.duong@edu.esiee.fr','Hoang-Duc','Duong');
 insert into users (username,password,email,firstname,lastname) values ('tralo','tralo','loc.tran@esiee.fr','Loc','Tran');
+
+create table user_id(
+	username varchar(50),
+	gaming_username varchar(50),
+	platform varchar(50),
+	id_card varchar(50),
+	id_key varchar(50)
+);
+
+insert into user_id (username,gaming_username,platform,id_card,id_key) values ('tralo','tralo','Nintendo Switch','1234123412341234','123');
 
 create table products(
 	name varchar(50),
